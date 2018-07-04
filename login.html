@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+     var x = document.forms["myForm"]["pwd"].value;
+    if (x == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+</script>    
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=login] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 0px 12px 12px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: center;
+    text-align: center;
+}
+
+input[type=login]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=login] {
+        width: 100%;
+        margin-top: 0;
+    }
+</style>
+<body style="background-color:#787878;">
+
+
+
+<div class="w3-container w3-padding-32 w3-theme-d1"><center>
+ <div class="container">
+ <form name="myForm" action="/action_page.php"
+   onsubmit="return validateForm()" method="post">
+   Email: <input type="text" name="email"><br>
+   Password: <input type="text" name="pwd"><br>
+   
+
+   
+   
+   <br>
+   <input type="login" value="Login">
+   </form>
+  
+  </div>
+  </center>
+</div>
+
+
+
+
+</body>
+</html>
